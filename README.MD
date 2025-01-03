@@ -10,10 +10,10 @@
   </a>
 </p>
 
-[![GitHub Release](https://img.shields.io/github/v/release/Troniza/MarzbanTemplate?color=blue&style=for-the-badge&logo=github)](https://github.com/x0sina/marzban-sub/releases)
-[![GitHub Stars](https://img.shields.io/github/stars/Troniza/MarzbanTemplate?color=yellow&style=for-the-badge&logo=github)](https://github.com/x0sina/marzban-sub/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/Troniza/MarzbanTemplate?color=green&style=for-the-badge&logo=github)](https://github.com/x0sina/marzban-sub/network)
-[![GitHub Issues](https://img.shields.io/github/issues/Troniza/MarzbanTemplate?color=red&style=for-the-badge&logo=github)](https://github.com/x0sina/marzban-sub/issues)
+[![GitHub Release](https://img.shields.io/github/v/release/Troniza/MarzbanTemplate?color=blue&style=for-the-badge&logo=github)](https://github.com/Troniza/MarzbanTemplate/releases)
+[![GitHub Stars](https://img.shields.io/github/stars/Troniza/MarzbanTemplate?color=yellow&style=for-the-badge&logo=github)](https://github.com/Troniza/MarzbanTemplate/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/Troniza/MarzbanTemplate?color=green&style=for-the-badge&logo=github)](https://github.com/Troniza/MarzbanTemplate/network)
+[![GitHub Issues](https://img.shields.io/github/issues/Troniza/MarzbanTemplate?color=red&style=for-the-badge&logo=github)](https://github.com/Troniza/MarzbanTemplate/issues)
 
 <p align="center">
   <a href="#-persian">🇮🇷 فارسی</a> |
