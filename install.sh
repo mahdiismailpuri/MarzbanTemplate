@@ -76,3 +76,5 @@ echo -e "${GREEN}
 
 
 ${NC}"
+
+echo -e "Check your subscription page to see the changes , if changes are not visible please use --> ${GREEN}marzban restart${NC}"
