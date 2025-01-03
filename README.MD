@@ -2,14 +2,16 @@
   
 # 🎄 قالب سابسکریپشن برای پنل مرزبان تم کریسمس
 
+
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/Troniza/MarzbanTemplate/main/PreviewTemplate%400.5x.png" alt="Marzban-Sub Preview" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
 </p>
 
-[![GitHub Release](https://img.shields.io/github/v/release/x0sina/marzban-sub?color=blue&style=for-the-badge&logo=github)](https://github.com/x0sina/marzban-sub/releases)
-[![GitHub Stars](https://img.shields.io/github/stars/x0sina/marzban-sub?color=yellow&style=for-the-badge&logo=github)](https://github.com/x0sina/marzban-sub/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/x0sina/marzban-sub?color=green&style=for-the-badge&logo=github)](https://github.com/x0sina/marzban-sub/network)
-[![GitHub Issues](https://img.shields.io/github/issues/x0sina/marzban-sub?color=red&style=for-the-badge&logo=github)](https://github.com/x0sina/marzban-sub/issues)
+[![GitHub Release](https://img.shields.io/github/v/release/Troniza/MarzbanTemplate?color=blue&style=for-the-badge&logo=github)](https://github.com/x0sina/marzban-sub/releases)
+[![GitHub Stars](https://img.shields.io/github/stars/Troniza/MarzbanTemplate?color=yellow&style=for-the-badge&logo=github)](https://github.com/x0sina/marzban-sub/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/Troniza/MarzbanTemplate?color=green&style=for-the-badge&logo=github)](https://github.com/x0sina/marzban-sub/network)
+[![GitHub Issues](https://img.shields.io/github/issues/Troniza/MarzbanTemplate?color=red&style=for-the-badge&logo=github)](https://github.com/x0sina/marzban-sub/issues)
 
 <p align="center">
   <a href="#-persian">🇮🇷 فارسی</a> |
