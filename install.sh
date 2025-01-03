@@ -46,7 +46,7 @@ echo -e "${YELLOW}
 █▄▀ █▄█ ▀▄▀▄▀ █░▀█ █▄▄ █▄█ █▀█ █▄▀ █ █░▀█ █▄█   █▀░ █ █▄▄ ██▄ ▄█ ▄ ▄ ▄
 
 ${NC}"
-sudo wget -N -P /var/lib/marzban/templates/subscription/ https://raw.githubusercontent.com/Troniza/MarzbanTheme/refs/heads/main/index.html
+sudo wget -N -P /var/lib/marzban/templates/subscription/ https://raw.githubusercontent.com/Troniza/MarzbanTemplate/main/index.html
 
 # Add environment variables
 echo -e "${CYAN}Adding environment variables...${NC}"
