@@ -105,7 +105,7 @@ while true; do
 
 ${NC}"
     echo -e "\n${LIGHT_PURPLE}╔══════════════════════════╗${NC}"
-    echo -e "${LIGHT_PURPLE}║${LIGHT_BLUE}    Troniza Theme Manager      ${LIGHT_PURPLE}║${NC}"
+    echo -e "${LIGHT_PURPLE}║${LIGHT_BLUE}  Troniza Theme Manager  ${LIGHT_PURPLE}║${NC}"
     echo -e "${LIGHT_PURPLE}╚══════════════════════════╝${NC}"
     
     echo -e "\n${WHITE}Choose an option:${NC}"
