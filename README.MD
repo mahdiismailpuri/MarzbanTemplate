@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/Troniza/MarzbanTemplate" target="_blank" rel="noopener noreferrer">
-    <img src="https://raw.githubusercontent.com/Troniza/MarzbanTemplate/main/Preview.png" alt="Marzban-Sub Preview" width="800"/>
+    <img src="https://raw.githubusercontent.com/Troniza/MarzbanTemplate/main/Previe.png" alt="Marzban-Sub Preview" width="800"/>
   </a>
 </p>
 
