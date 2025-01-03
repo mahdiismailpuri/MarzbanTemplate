@@ -1,0 +1,475 @@
+:root {
+    --christmas-red: #D42426;
+    --christmas-green: #165B33;
+    --christmas-gold: #FFD700;
+    --snow-white: #FFFFFF;
+    --christmas-dark-red: #d42427bd;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #1a472a, #2d5a3f);
+}
+
+.asli {
+    background: url('./christmas-wallpaper-design.jpg') no-repeat center;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Add a subtle overlay */
+.asli::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+}
+
+/* Christmas Card Styling */
+.bg-white {
+    background: linear-gradient(135deg, var(--christmas-red), var(--christmas-green)) !important;
+    border: 2px solid var(--christmas-gold);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    color: var(--snow-white) !important;
+}
+
+.bg-white:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+/* Christmas Button Styling */
+button, .button {
+    background-color: var(--christmas-red) !important;
+    border: 2px solid var(--christmas-gold) !important;
+    color: white !important;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px !important;
+}
+
+button:hover, .button:hover {
+    background-color: var(--christmas-green) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Christmas Text Styling */
+h1, h2, h3, h4 {
+    color: var(--snow-white);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+/* Snow Animation */
+.snow-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.snow {
+    position: fixed;
+    color: white;
+    top: -10px;
+    user-select: none;
+    z-index: 9999;
+    pointer-events: none;
+    animation: snowfall linear infinite;
+}
+
+.snow::before {
+    content: '❄';
+    position: absolute;
+    color: white;
+    font-size: 1.5em;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(-10vh) translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) translateX(20px);
+        opacity: 0;
+    }
+}
+
+a:hover {
+    color: var(--christmas-green) !important;
+    text-decoration: none;
+}
+
+/* Christmas Table Styling */
+table {
+    border: 2px solid var(--christmas-gold);
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+th {
+    background-color: var(--christmas-red) !important;
+    color: white !important;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(22, 91, 51, 0.1);
+}
+
+/* Christmas Input Styling */
+input, select, textarea {
+    border: 2px solid var(--christmas-gold) !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    transition: all 0.3s ease;
+    border-radius: 12px !important;
+    padding: 8px 12px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--christmas-red) !important;
+    box-shadow: 0 0 5px var(--christmas-gold) !important;
+}
+
+/* Christmas Icons */
+.icon {
+    color: var(--snow-white);
+    transition: all 0.3s ease;
+}
+
+.icon:hover {
+    color: var(--christmas-green);
+    transform: scale(1.1);
+}
+
+/* Add snowflake decoration to corners */
+.corner-snowflake::before {
+    content: "❄️";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+/* Override Tailwind blue with Christmas gradient */
+.bg-blue-600 {
+    background: linear-gradient(135deg, var(--christmas-red), var(--christmas-green)) !important;
+    --tw-bg-opacity: 1 !important;
+}
+
+.bg-blue-600:hover {
+    opacity: 0.95;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Override Tailwind peer checked state with Christmas gradient */
+.peer:checked~.peer-checked\:bg-blue-600 {
+    background: linear-gradient(135deg, var(--christmas-red), var(--christmas-green)) !important;
+    --tw-bg-opacity: 1 !important;
+    transition: all 0.3s ease;
+}
+
+/* Override Tailwind darker blue with Christmas gradient */
+.bg-blue-700 {
+    background: linear-gradient(135deg, var(--christmas-dark-red), var(--christmas-green)) !important;
+    --tw-bg-opacity: 1 !important;
+}
+
+.bg-blue-700:hover {
+    opacity: 0.95;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Shadow Colors Override */
+.tw-shadow-color {
+    --tw-shadow-color: rgba(41, 74, 49, 0.8) !important;
+    --tw-shadow: var(--tw-shadow-colored) !important;
+}
+
+/* Blue Shadow Override */
+.shadow-blue-500, .shadow-blue-600, .shadow-blue-700, .shadow-blue-800 {
+    --tw-shadow-color: rgba(41, 74, 49, 0.8) !important;
+    --tw-shadow: var(--tw-shadow-colored) !important;
+}
+
+/* Blue Classes Christmas Green Gradient */
+.from-blue-500, .from-blue-600, .from-blue-700 {
+    --tw-gradient-from: #165B33 var(--tw-gradient-from-position) !important;
+    --tw-gradient-to: #0B2B1A var(--tw-gradient-to-position) !important;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+    background: linear-gradient(to bottom, #165B33, #0B2B1A) !important;
+}
+
+.via-blue-500, .via-blue-600, .via-blue-700 {
+    --tw-gradient-to: #0B2B1A var(--tw-gradient-to-position) !important;
+    --tw-gradient-stops: var(--tw-gradient-from), #165B33 var(--tw-gradient-via-position), var(--tw-gradient-to) !important;
+    background: linear-gradient(to bottom, #165B33, #0B2B1A) !important;
+}
+
+.to-blue-500, .to-blue-600, .to-blue-700 {
+    --tw-gradient-to: #0B2B1A var(--tw-gradient-to-position) !important;
+    background: linear-gradient(to bottom, #165B33, #0B2B1A) !important;
+}
+
+/* Christmas Gradient Colors Override */
+.from-amber-500, .from-cyan-400, .from-cyan-500, .from-emerald-500,
+.from-green-400, .from-green-500, .from-indigo-600, .from-pink-400,
+.from-purple-500, .from-purple-600, .from-red-200, .from-red-400, .from-rose-500,
+.from-slate-500, .from-teal-400, .from-teal-500, .from-yellow-500,
+.from-zinc-500 {
+    --tw-gradient-from: var(--christmas-red) var(--tw-gradient-from-position) !important;
+    --tw-gradient-to: var(--christmas-green) var(--tw-gradient-to-position) !important;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+    background: linear-gradient(to bottom, var(--christmas-red), var(--christmas-green)) !important;
+}
+
+.via-amber-600, .via-cyan-500, .via-emerald-600,
+.via-green-500, .via-green-600, .via-indigo-700, .via-pink-500, .via-purple-600,
+.via-red-300, .via-red-500, .via-rose-600, .via-teal-500 {
+    --tw-gradient-to: var(--christmas-green) var(--tw-gradient-to-position) !important;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--christmas-green) var(--tw-gradient-via-position), var(--tw-gradient-to) !important;
+    background: linear-gradient(to bottom, var(--christmas-red), var(--christmas-green)) !important;
+}
+
+.to-amber-700, .to-cyan-600, .to-emerald-700,
+.to-green-600, .to-green-700, .to-indigo-800, .to-pink-600, .to-purple-700,
+.to-red-400, .to-red-600, .to-rose-700, .to-teal-600 {
+    --tw-gradient-to: var(--christmas-green) var(--tw-gradient-to-position) !important;
+    background: linear-gradient(to bottom, var(--christmas-red), var(--christmas-green)) !important;
+}
+
+/* Text Color Override */
+.text-red-500, .text-red-600, .text-red-700,
+.text-rose-500, .text-rose-600, .text-rose-700 {
+    color: var(--snow-white) !important;
+}
+
+/* QR Button Size Fix */
+#qrIconBtn {
+    width: 55px !important;
+    height: 55px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#qrIconBtn lord-icon {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+/* Dark Mode Shadow and Ring Override */
+@media (prefers-color-scheme: dark) {
+    .dark\:shadow-blue-800\/80 {
+        --tw-shadow-color: rgba(41, 74, 49, 0.8);
+        --tw-shadow: var(--tw-shadow-colored);
+    }
+
+    .peer:focus~.dark\:peer-focus\:ring-blue-800 {
+        --tw-ring-color: rgba(41, 74, 49, 0.8);
+    }
+
+    .dark\:focus\:ring-blue-800:focus {
+        --tw-ring-color: rgba(41, 74, 49, 0.8);
+    }
+}
+
+/* Christmas Theme using Tailwind CSS v3.3.3 */
+
+.christmas-bg {
+    @apply bg-[#165B33];
+}
+
+.christmas-text {
+    @apply text-white;
+}
+
+.christmas-card {
+    @apply bg-white/10 backdrop-blur-sm rounded-lg shadow-lg p-6 border-2 border-white/20;
+}
+
+.christmas-button {
+    @apply bg-white/20 text-white px-4 py-2 rounded-full hover:bg-white/30 transition-colors duration-300;
+}
+
+.christmas-header {
+    @apply text-white font-bold text-2xl md:text-4xl;
+}
+
+.christmas-border {
+    @apply border-white border-2;
+}
+
+.christmas-shadow {
+    @apply shadow-lg shadow-white/20;
+}
+
+.snow-effect {
+    @apply relative overflow-hidden;
+}
+
+.snow-effect::before {
+    @apply content-[''] absolute top-0 left-0 w-full h-full pointer-events-none;
+    background: radial-gradient(circle at center, #fff 0.1em, transparent 0.2em) 0 0/1em 1em;
+    animation: snowfall 10s linear infinite;
+}
+
+/* Shadow override */
+.dark\:shadow-blue-800\/80 {
+    --tw-shadow-color: rgba(7, 85, 11, 0.726) !important;
+    --tw-shadow: var(--tw-shadow-colored) !important;
+}
+
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* Glass effect for language select */
+.glass-select {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05)) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 12px !important;
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.1),
+        0 1px 3px rgba(0, 0, 0, 0.08),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative !important;
+    cursor: pointer !important;
+}
+
+.glass-select option {
+    background-color: rgba(23, 23, 23, 0.9) !important;
+    color: white !important;
+    padding: 10px !important;
+}
+
+.glass-select:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.1)) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 
+        0 8px 12px rgba(0, 0, 0, 0.15),
+        0 3px 6px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.2) !important;
+    transform: translateY(-2px) !important;
+}
+
+.glass-select:focus {
+    outline: none !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 
+        0 0 0 2px rgba(255, 255, 255, 0.1),
+        0 8px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Dark mode styles */
+.dark .glass-select {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02)) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}
+
+.dark .glass-select option {
+    background-color: rgba(45, 45, 45, 0.95) !important;
+    color: white !important;
+}
+
+.dark .glass-select:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05)) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Glass effect for countries select */
+#countries {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05)) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 12px !important;
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.1),
+        0 1px 3px rgba(0, 0, 0, 0.08),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative !important;
+    cursor: pointer !important;
+}
+
+#countries option {
+    background-color: rgba(23, 23, 23, 0.9) !important;
+    color: white !important;
+    padding: 10px !important;
+}
+
+#countries:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.1)) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 
+        0 8px 12px rgba(0, 0, 0, 0.15),
+        0 3px 6px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.2) !important;
+    transform: translateY(-2px) !important;
+}
+
+#countries:focus {
+    outline: none !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 
+        0 0 0 2px rgba(255, 255, 255, 0.1),
+        0 8px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Dark mode styles */
+.dark #countries {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02)) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}
+
+.dark #countries option {
+    background-color: rgba(45, 45, 45, 0.95) !important;
+    color: white !important;
+}
+
+.dark #countries:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05)) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Override Tailwind classes */
+#countries {
+    background-color: transparent !important;
+}
