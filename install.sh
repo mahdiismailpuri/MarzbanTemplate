@@ -1,19 +1,19 @@
 #!/bin/bash
 
-# Colors for output
-GREEN='\033[0;32m'
-LIGHT_GREEN='\033[1;32m'
-YELLOW='\033[1;33m'
-RED='\033[0;31m'
-LIGHT_RED='\033[1;31m'
-BLUE='\033[0;34m'
-LIGHT_BLUE='\033[1;34m'
-PURPLE='\033[0;35m'
-LIGHT_PURPLE='\033[1;35m'
-CYAN='\033[0;36m'
-LIGHT_CYAN='\033[1;36m'
-WHITE='\033[1;37m'
-NC='\033[0m' # No Color
+# Colors for output - Softer variants
+GREEN='\033[38;5;71m'      # Soft green
+LIGHT_GREEN='\033[38;5;114m'  # Pale green
+YELLOW='\033[38;5;179m'    # Soft yellow
+RED='\033[38;5;167m'       # Soft red
+LIGHT_RED='\033[38;5;174m' # Pale red
+BLUE='\033[38;5;67m'       # Soft blue
+LIGHT_BLUE='\033[38;5;110m' # Pale blue
+PURPLE='\033[38;5;139m'    # Soft purple
+LIGHT_PURPLE='\033[38;5;146m' # Pale purple
+CYAN='\033[38;5;73m'       # Soft cyan
+LIGHT_CYAN='\033[38;5;116m' # Pale cyan
+WHITE='\033[38;5;252m'     # Soft white
+NC='\033[0m'               # No Color
 
 # Template directory
 TEMPLATE_DIR="/var/lib/marzban/templates/subscription/"
@@ -104,11 +104,9 @@ while true; do
 ░░░╚═╝░░░╚══════╝╚═╝░░░░░╚═╝╚═╝░░░░░╚══════╝╚═╝░░╚═╝░░░╚═╝░░░╚══════╝░░░░░░░░░╚═╝░░░░╚════╝░╚═╝╚══════╝╚═╝╚══════╝
 
 ${NC}"
-    echo -e "\n${LIGHT_PURPLE}╔══════════════════════════╗${NC}"
-    echo -e "${LIGHT_PURPLE}║${LIGHT_BLUE}  Troniza Theme Manager  ${LIGHT_PURPLE}║${NC}"
-    echo -e "${LIGHT_PURPLE}╚══════════════════════════╝${NC}"
-    
+
     echo -e "\n${WHITE}Choose an option:${NC}"
+    
     echo -e "${CYAN}1)${NC} ${GREEN}Install Theme${NC}"
     echo -e "${CYAN}2)${NC} ${BLUE}Update Theme${NC}"
     echo -e "${CYAN}3)${NC} ${PURPLE}Check Installation${NC}"
@@ -143,7 +141,7 @@ ${NC}"
             read -p "$(echo -e ${WHITE}Press Enter to continue...${NC})"
             ;;
         6)
-            echo -e "${LIGHT_GREEN}Thank you for using Marzban Theme Manager!${NC}"
+            echo -e "${LIGHT_GREEN}Thank you for using Troniza Theme Manager!${NC}"
             exit 0
             ;;
         *)
@@ -152,4 +150,3 @@ ${NC}"
             ;;
     esac
 done
-
