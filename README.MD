@@ -1,10 +1,9 @@
-
 <div align="center">
   
-# 🚀 Marzban Subscription Template
+# 🎄 قالب سابسکریپشن برای پنل مرزبان تم کریسمس
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/x0sina/marzban-sub/main/PreviewTemplate.png" alt="Marzban-Sub Preview" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+  <img src="https://raw.githubusercontent.com/Troniza/MarzbanTemplate/main/christmas-wallpaper-design.jpg" alt="Marzban-Sub Preview" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
 </p>
 
 [![GitHub Release](https://img.shields.io/github/v/release/x0sina/marzban-sub?color=blue&style=for-the-badge&logo=github)](https://github.com/x0sina/marzban-sub/releases)
