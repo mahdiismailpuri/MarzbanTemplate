@@ -1,66 +1,55 @@
 #!/bin/bash
 
-# Colors for output - Softer variants
-GREEN='\033[38;5;71m'      # Soft green
-LIGHT_GREEN='\033[38;5;114m'  # Pale green
-YELLOW='\033[38;5;179m'    # Soft yellow
-RED='\033[38;5;167m'       # Soft red
-LIGHT_RED='\033[38;5;174m' # Pale red
-BLUE='\033[38;5;67m'       # Soft blue
-LIGHT_BLUE='\033[38;5;110m' # Pale blue
-PURPLE='\033[38;5;139m'    # Soft purple
-LIGHT_PURPLE='\033[38;5;146m' # Pale purple
-CYAN='\033[38;5;73m'       # Soft cyan
-LIGHT_CYAN='\033[38;5;116m' # Pale cyan
-WHITE='\033[38;5;252m'     # Soft white
-NC='\033[0m'               # No Color
+# Colors for output - Essential colors
+GREEN='\033[0;32m'       # For successful operations
+RED='\033[0;31m'        # For deletions and errors
+YELLOW='\033[1;33m'     # For warnings and attention
+BLUE='\033[38;5;117m'   # For menu items and headers
+NC='\033[0m'            # No Color
 
 # Template directory
 TEMPLATE_DIR="/var/lib/marzban/templates/subscription/"
 
 # Function to install theme
 install_theme() {
-    echo -e "${LIGHT_BLUE}Installing Marzban Theme...${NC}"
+    echo -e "${BLUE}Installing Marzban Theme...${NC}"
     mkdir -p "$TEMPLATE_DIR"
-    echo -e "${CYAN}Downloading template files...${NC}"
+    echo -e "${BLUE}Downloading template files...${NC}"
     wget -N -P "$TEMPLATE_DIR" https://raw.githubusercontent.com/Troniza/MarzbanTemplate/main/index.html
-    echo -e "${PURPLE}Configuring Marzban...${NC}"
+    echo -e "${BLUE}Configuring Marzban...${NC}"
     echo 'CUSTOM_TEMPLATES_DIRECTORY="/var/lib/marzban/templates/"' | sudo tee -a /opt/marzban/.env
     echo 'SUBSCRIPTION_PAGE_TEMPLATE="subscription/index.html"' | sudo tee -a /opt/marzban/.env
-    echo -e "${LIGHT_PURPLE}Setting permissions...${NC}"
     chown -R marzban:marzban "$TEMPLATE_DIR"
     chmod -R 755 "$TEMPLATE_DIR"
     echo -e "${YELLOW}Restarting Marzban...${NC}"
     marzban restart
-    echo -e "${LIGHT_GREEN}Theme installed successfully!${NC}"
+    echo -e "${GREEN}Theme installed successfully!${NC}"
 }
 
 # Function to update theme
 update_theme() {
-    echo -e "${LIGHT_CYAN}Updating Marzban Theme...${NC}"
-    echo -e "${CYAN}Downloading latest version...${NC}"
+    echo -e "${BLUE}Updating Marzban Theme...${NC}"
     wget -N -P "$TEMPLATE_DIR" https://raw.githubusercontent.com/Troniza/MarzbanTemplate/main/index.html
-    echo -e "${LIGHT_PURPLE}Updating permissions...${NC}"
     chown -R marzban:marzban "$TEMPLATE_DIR"
     chmod -R 755 "$TEMPLATE_DIR"
     echo -e "${YELLOW}Restarting Marzban...${NC}"
     marzban restart
-    echo -e "${LIGHT_GREEN}Theme updated successfully!${NC}"
+    echo -e "${GREEN}Theme updated successfully!${NC}"
 }
 
 # Function to check installation
 check_installation() {
-    echo -e "${LIGHT_BLUE}Checking installation status...${NC}"
+    echo -e "${BLUE}Checking installation status...${NC}"
     if [ -f "$TEMPLATE_DIR/index.html" ]; then
-        echo -e "${LIGHT_GREEN}✓ Theme is installed!${NC}"
-        echo -e "${CYAN}Installation path: ${WHITE}$TEMPLATE_DIR${NC}"
+        echo -e "${GREEN}✓ Theme is installed!${NC}"
+        echo -e "${BLUE}Installation path: $TEMPLATE_DIR${NC}"
         if grep -q "CUSTOM_TEMPLATES_DIRECTORY" /opt/marzban/.env; then
-            echo -e "${LIGHT_GREEN}✓ Marzban configuration is correct${NC}"
+            echo -e "${GREEN}✓ Marzban configuration is correct${NC}"
         else
-            echo -e "${LIGHT_RED}✗ Marzban configuration is missing${NC}"
+            echo -e "${RED}✗ Marzban configuration is missing${NC}"
         fi
     else
-        echo -e "${LIGHT_RED}✗ Theme is not installed!${NC}"
+        echo -e "${RED}✗ Theme is not installed!${NC}"
     fi
 }
 
@@ -68,26 +57,24 @@ check_installation() {
 restart_marzban() {
     echo -e "${YELLOW}Restarting Marzban...${NC}"
     marzban restart
-    echo -e "${LIGHT_GREEN}Marzban restarted successfully!${NC}"
+    echo -e "${GREEN}Marzban restarted successfully!${NC}"
 }
 
 # Function to uninstall theme
 uninstall_theme() {
-    echo -e "${LIGHT_RED}Uninstalling Marzban Theme...${NC}"
-    echo -e "${RED}Removing theme files...${NC}"
+    echo -e "${RED}Uninstalling Marzban Theme...${NC}"
     rm -rf "$TEMPLATE_DIR/index.html"
-    echo -e "${PURPLE}Removing configuration...${NC}"
     sed -i '/CUSTOM_TEMPLATES_DIRECTORY/d' /opt/marzban/.env
     sed -i '/SUBSCRIPTION_PAGE_TEMPLATE/d' /opt/marzban/.env
     echo -e "${YELLOW}Restarting Marzban...${NC}"
     marzban restart
-    echo -e "${LIGHT_GREEN}Theme uninstalled successfully!${NC}"
+    echo -e "${GREEN}Theme uninstalled successfully!${NC}"
 }
 
 # Main menu
 while true; do
     clear
-    echo -e "${LIGHT_CYAN}
+    echo -e "${BLUE}
 
 ████████╗██████╗░░█████╗░███╗░░██╗██╗███████╗░█████╗░░░░░░░███╗░░░███╗░█████╗░██████╗░███████╗██████╗░░█████╗░███╗░░██╗
 ╚══██╔══╝██╔══██╗██╔══██╗████╗░██║██║╚════██║██╔══██╗░░░░░░████╗░████║██╔══██╗██╔══██╗╚════██║██╔══██╗██╔══██╗████╗░██║
@@ -105,48 +92,48 @@ while true; do
 
 ${NC}"
 
-    echo -e "\n${WHITE}Choose an option:${NC}"
+    echo -e "\n${BLUE}Choose an option:${NC}"
     
-    echo -e "${CYAN}1)${NC} ${GREEN}Install Theme${NC}"
-    echo -e "${CYAN}2)${NC} ${BLUE}Update Theme${NC}"
-    echo -e "${CYAN}3)${NC} ${PURPLE}Check Installation${NC}"
-    echo -e "${CYAN}4)${NC} ${YELLOW}Restart Marzban${NC}"
-    echo -e "${CYAN}5)${NC} ${RED}Uninstall Theme${NC}"
-    echo -e "${CYAN}6)${NC} ${LIGHT_RED}Exit${NC}\n"
+    echo -e "${BLUE}1)${NC} ${GREEN}Install Theme${NC}"
+    echo -e "${BLUE}2)${NC} ${GREEN}Update Theme${NC}"
+    echo -e "${BLUE}3)${NC} ${BLUE}Check Installation${NC}"
+    echo -e "${BLUE}4)${NC} ${YELLOW}Restart Marzban${NC}"
+    echo -e "${BLUE}5)${NC} ${RED}Uninstall Theme${NC}"
+    echo -e "${BLUE}6)${NC} ${RED}Exit${NC}\n"
     
-    read -p "$(echo -e ${WHITE}Select an option [1-6]:${NC} )" choice
+    read -p "$(echo -e ${BLUE}Select an option [1-6]:${NC} )" choice
 
     case $choice in
         1)
             install_theme
-            read -p "$(echo -e ${WHITE}Press Enter to continue...${NC})"
+            read -p "$(echo -e ${BLUE}Press Enter to continue...${NC})"
             ;;
         2)
             update_theme
-            read -p "$(echo -e ${WHITE}Press Enter to continue...${NC})"
+            read -p "$(echo -e ${BLUE}Press Enter to continue...${NC})"
             ;;
         3)
             check_installation
-            read -p "$(echo -e ${WHITE}Press Enter to continue...${NC})"
+            read -p "$(echo -e ${BLUE}Press Enter to continue...${NC})"
             ;;
         4)
             restart_marzban
-            read -p "$(echo -e ${WHITE}Press Enter to continue...${NC})"
+            read -p "$(echo -e ${BLUE}Press Enter to continue...${NC})"
             ;;
         5)
-            read -p "$(echo -e ${LIGHT_RED}Are you sure you want to uninstall the theme? (y/n):${NC} )" confirm
+            read -p "$(echo -e ${RED}Are you sure you want to uninstall the theme? (y/n):${NC} )" confirm
             if [ "$confirm" = "y" ] || [ "$confirm" = "Y" ]; then
                 uninstall_theme
             fi
-            read -p "$(echo -e ${WHITE}Press Enter to continue...${NC})"
+            read -p "$(echo -e ${BLUE}Press Enter to continue...${NC})"
             ;;
         6)
-            echo -e "${LIGHT_GREEN}Thank you for using Troniza Theme Manager!${NC}"
+            echo -e "${GREEN}Thank you for using Troniza Theme Manager!${NC}"
             exit 0
             ;;
         *)
-            echo -e "${LIGHT_RED}Invalid option${NC}"
-            read -p "$(echo -e ${WHITE}Press Enter to continue...${NC})"
+            echo -e "${RED}Invalid option${NC}"
+            read -p "$(echo -e ${BLUE}Press Enter to continue...${NC})"
             ;;
     esac
 done
