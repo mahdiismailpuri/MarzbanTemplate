@@ -53,7 +53,7 @@ function createSnowflake() {
 
 // Create initial snowflakes
 function initSnow() {
-    const numberOfSnowflakes = 85; 
+    const numberOfSnowflakes = 50; 
     for (let i = 0; i < numberOfSnowflakes; i++) {
         setTimeout(() => createSnowflake(), i * 50); 
     }
