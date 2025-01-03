@@ -49,32 +49,30 @@
   - پشتیبانی از زبان روسی
 
 - 🛠️ **امکانات پیشرفته**
-  ### ✨ ویژگی‌ها
-- 🚀 افزودن سریع لینک سابسکریپشن به برنامه‌ها
-- 📱 لینک دانلود اپلیکیشن‌های مورد نیاز
-- 📋 دکمه کپی برای کانفیگ‌ها در انتهای صفحه
+  - 🚀 افزودن سریع لینک سابسکریپشن به برنامه‌ها
+  - 📱 لینک دانلود اپلیکیشن‌های مورد نیاز
+  - 📋 دکمه کپی برای کانفیگ‌ها در انتهای صفحه
 
 ## ⚙️ نصب و راه‌اندازی
 
-### 📥 دانلود و نصب
-
-#### 🚩 برای نصب اول کامند زیر را اجرا کنید 
+### 🚩 برای نصب اول کامند زیر را اجرا کنید 
 
 ```bash
 sudo wget https://raw.githubusercontent.com/Troniza/MarzbanTemplate/main/install.sh && chmod +x install.sh && sudo ./install.sh
 ```
 
-# گزینه های منو 📱
+## گزینه های منو 📱
 
-1 - نصب تم
-2 - دانلود تم
-3 - بررسی نصب
-4 - راه‌اندازی مجدد مرزبان
-5 - حذف تم
-6 - خروج
+- نصب تم
+- دانلود تم
+- بررسی نصب
+- راه‌اندازی مجدد مرزبان
+- حذف تم
+- خروج
 
+### 🤖 جهت نصب عدد 1 را وارد کرده و ادامه مراحل نصب بصورت خودکار انجام میشود 
 
-### 🎨 شخصی‌سازی
+## 🎨 شخصی‌سازی
 
 برای شخصی سازی ایدی تلگرام, تصویر پس زمینه و لوگوی کاربر باید تغییراتی در فایل html لحاظ شود که با سرچ کردن برخی مقادیر امکان پذیره.
 برای سرچ کردن با استفاده از nano ابتدا فایل را با nano با دستور زیر باز کنید:
@@ -85,16 +83,11 @@ nano /var/lib/marzban/templates/subscription/index.html
 ```
 https://t.me/yourID
 ```
-برای لوگوی کاربر این عبارتو سرچ کنید:
-```
-images/marzban.svg
-```
 برای تصویر پس زمینه این عبارتو سرچ کنید:
 ```
 background: url('https://4kwallpapers.com
 ```
 پس از اعمال تغییرات فایل رو سیو کنید و مرزبان رو ریستارت کنید.
-
 
 </div>
 
@@ -114,71 +107,101 @@ background: url('https://4kwallpapers.com
   - Russian language support
 
 - 🛠️ **Advanced Features**
-  - One-click config copying
-  - Direct app download links
-  - Easy subscription management
+  - 🚀 Quick subscription link addition to apps
+  - 📱 Essential app download links
+  - 📋 Copy button for configs at page bottom
 
 ## ⚙️ Installation & Setup
 
-### 📥 Download & Install
+### 🚩 Run this command first to install
+
 ```bash
-# Download template file
-sudo wget -N -P /var/lib/marzban/templates/subscription/ https://raw.githubusercontent.com/x0sina/marzban-sub/main/index.html
-
-# Set environment variables
-sudo bash -c 'cat >> /opt/marzban/.env << EOL
-CUSTOM_TEMPLATES_DIRECTORY="/var/lib/marzban/templates/"
-SUBSCRIPTION_PAGE_TEMPLATE="subscription/index.html"
-EOL'
-
-# Restart service
-marzban restart
+sudo wget https://raw.githubusercontent.com/Troniza/MarzbanTemplate/main/install.sh && chmod +x install.sh && sudo ./install.sh
 ```
 
-### 🎨 Customization
+## Menu Options 📱
 
-<details>
-<summary>Visual Settings</summary>
+- Install Theme
+- Update Theme
+- Check Installation
+- Restart Marzban
+- Uninstall Theme
+- Exit
 
-1. **Change Logo**
-```html
-<!-- Search for -->
-images/marzban.svg
+### 🤖 Enter number 1 to install, and the installation will proceed automatically
+
+## 🎨 Customization
+
+To customize the Telegram ID, background image, and user logo, you need to modify the HTML file by searching for specific values.
+To search using nano, first open the file with nano using this command:
 ```
-
-2. **Change Background**
-```css
-/* Search for */
-background: url('...')
+nano /var/lib/marzban/templates/subscription/index.html
 ```
-
-3. **Change Telegram Support ID**
-```html
-<!-- Search for -->
+Then use Ctrl + W to open the search bar and search for the following to change the Telegram support ID:
+```
 https://t.me/yourID
 ```
-</details>
-
-### 🌐 Host Version Setup
-```php
-// Edit in index.php
-const BASE_URL = "https://your-panel-url:PORT";
+For the background image, search for:
 ```
+background: url('https://4kwallpapers.com
+```
+After making changes, save the file and restart Marzban.
 
 ---
 
-# 🇷🇺 Russian
+# 🇷🇺 Русский
 
-<details>
-<summary>Click to expand Russian documentation</summary>
+## ✨ Ключевые особенности
+- 🎯 **Современный UI/UX**
+  - Красивый и интуитивно понятный дизайн
+  - Полностью адаптивный интерфейс
+  - Плавные анимации
+  
+- 🌍 **Многоязычная поддержка**
+  - Полный персидский интерфейс
+  - Английский для международных пользователей
+  - Поддержка русского языка
 
-## ✨ Основные функции
-- Современный пользовательский интерфейс
-- Многоязычная поддержка
-- Продвинутые функции управления
+- 🛠️ **Расширенные функции**
+  - 🚀 Быстрое добавление ссылки на подписку в приложения
+  - 📱 Ссылки для скачивания необходимых приложений
+  - 📋 Кнопка копирования конфигураций внизу страницы
 
-[Полная документация на русском языке скоро будет доступна]
-</details>
+## ⚙️ Установка и настройка
+
+### 🚩 Сначала выполните эту команду для установки
+
+```bash
+sudo wget https://raw.githubusercontent.com/Troniza/MarzbanTemplate/main/install.sh && chmod +x install.sh && sudo ./install.sh
+```
+
+## Опции меню 📱
+
+- Установить тему
+- Обновить тему
+- Проверить установку
+- Перезапустить Marzban
+- Удалить тему
+- Выход
+
+### 🤖 Введите цифру 1 для установки, и установка продолжится автоматически
+
+## 🎨 Настройка
+
+Для настройки Telegram ID, фонового изображения и логотипа пользователя необходимо внести изменения в HTML-файл, выполнив поиск определенных значений.
+Для поиска с помощью nano сначала откройте файл с помощью команды:
+```
+nano /var/lib/marzban/templates/subscription/index.html
+```
+Затем используйте Ctrl + W для открытия строки поиска и найдите следующее, чтобы изменить ID поддержки Telegram:
+```
+https://t.me/yourID
+```
+Для фонового изображения найдите:
+```
+background: url('https://4kwallpapers.com
+```
+После внесения изменений сохраните файл и перезапустите Marzban.
 
 ---
 
