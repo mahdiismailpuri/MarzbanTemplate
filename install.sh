@@ -95,37 +95,39 @@ ${NC}"
     echo -e "\n${BLUE}Choose an option:${NC}"
     
     echo -e "${BLUE}1)${NC} ${GREEN}Install Theme${NC}"
-    echo -e "${BLUE}2)${NC} ${GREEN}Update Theme${NC}"
-    echo -e "${BLUE}3)${NC} ${BLUE}Check Installation${NC}"
+    echo -e "${BLUE}2)${NC} ${BLUE}Update Theme${NC}"
+    echo -e "${BLUE}3)${NC} ${NC}Check Installation${NC}"
     echo -e "${BLUE}4)${NC} ${YELLOW}Restart Marzban${NC}"
+    
     echo -e "${BLUE}5)${NC} ${RED}Uninstall Theme${NC}"
     echo -e "${BLUE}6)${NC} ${RED}Exit${NC}\n"
     
-    read -p "$(echo -e ${BLUE}Select an option [1-6]:${NC} )" choice
+    read -p $'\033[38;5;117mSelect an option [1-6]:\033[0m ' choice
 
     case $choice in
         1)
             install_theme
-            read -p "$(echo -e ${BLUE}Press Enter to continue...${NC})"
+            read -p $'\033[38;5;117mPress Enter to continue...\033[0m'
             ;;
         2)
             update_theme
-            read -p "$(echo -e ${BLUE}Press Enter to continue...${NC})"
+            read -p $'\033[38;5;117mPress Enter to continue...\033[0m'
             ;;
         3)
             check_installation
-            read -p "$(echo -e ${BLUE}Press Enter to continue...${NC})"
+            read -p $'\033[38;5;117mPress Enter to continue...\033[0m'
             ;;
         4)
             restart_marzban
-            read -p "$(echo -e ${BLUE}Press Enter to continue...${NC})"
+            read -p $'\033[38;5;117mPress Enter to continue...\033[0m'
             ;;
         5)
-            read -p "$(echo -e ${RED}Are you sure you want to uninstall the theme? (y/n):${NC} )" confirm
+            echo -e "${RED}Are you sure you want to uninstall the theme? (y/n):${NC} "
+            read -p $'\033[0;31m>\033[0m ' confirm
             if [ "$confirm" = "y" ] || [ "$confirm" = "Y" ]; then
                 uninstall_theme
             fi
-            read -p "$(echo -e ${BLUE}Press Enter to continue...${NC})"
+            read -p $'\033[38;5;117mPress Enter to continue...\033[0m'
             ;;
         6)
             echo -e "${GREEN}Thank you for using Troniza Theme Manager!${NC}"
@@ -133,7 +135,7 @@ ${NC}"
             ;;
         *)
             echo -e "${RED}Invalid option${NC}"
-            read -p "$(echo -e ${BLUE}Press Enter to continue...${NC})"
+            read -p $'\033[38;5;117mPress Enter to continue...\033[0m'
             ;;
     esac
 done
