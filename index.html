@@ -29,6 +29,17 @@
     100% { transform: translateY(100vh) rotate(360deg); }
 }
 
+@keyframes explode          {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+
 .snowflake {
     position: fixed;
     color: white;
@@ -36,13 +47,21 @@
     animation: snowfall 10s linear infinite;
     z-index: 1;
     pointer-events: none;
+    cursor: pointer;
 }
+.explosion {
+            position: fixed;
+            pointer-events: none;
+            animation: explode 0.5s ease-out forwards;
+        }
 
 /* Christmas Background and Colors */
 body {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
                 url('https://images.unsplash.com/photo-1512389142860-9c449e58a543') no-repeat center fixed !important;
     background-size: cover !important;
+    overflow: hidden;
+    margin: 0;
 }
 
 /* Card styling */
